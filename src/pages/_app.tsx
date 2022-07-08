@@ -6,14 +6,16 @@ import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div id="app">
       <Head>
         <title>Portfolio</title>
       </Head>
       <Header />
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

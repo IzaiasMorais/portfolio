@@ -37,3 +37,26 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--gray-700);
+  width: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--button-color);
+}
