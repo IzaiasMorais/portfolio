@@ -1,0 +1,50 @@
+.HeaderContainer {
+  color: var(--white);
+
+  div {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+
+    > a {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        font-size: 1.125rem;
+        color: var(--gray-300);
+        transition: color 0.2s;
+        margin: 0 1.25rem;
+        padding: 1rem 0;
+
+        &:hover {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.active {
+  position: relative;
+  color: var(--white) !important;
+}
+
+.active::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  background: var(--purple);
+}

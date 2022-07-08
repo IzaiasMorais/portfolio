@@ -1,0 +1,17 @@
+.footer {
+  background: var(--gray-500);
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    span {
+      color: var(--text-purple);
+      font-weight: 600;
+    }
+  }
+}

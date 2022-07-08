@@ -1,0 +1,55 @@
+.HomeContainer {
+  display: flex;
+  max-width: 1060px;
+  margin: 7rem auto;
+
+  align-items: center;
+  justify-content: space-between;
+
+  .content {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      margin-bottom: 4rem;
+      color: var(--gray-300);
+    }
+    div {
+      display: flex;
+      gap: 1rem;
+
+      .talk {
+        background: var(--purple);
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.25rem;
+        transition: filter 0.2s;
+
+        &:hover {
+          filter: brightness(0.8);
+        }
+      }
+
+      .cv {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+        background: var(--button-color);
+        color: var(--white);
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.25rem;
+        transition: filter 0.2s;
+        // margin-left: 1rem;
+
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+    }
+  }
+
+  .svg {
+    max-width: 400px;
+  }
+}
