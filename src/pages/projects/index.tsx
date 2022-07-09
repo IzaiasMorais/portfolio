@@ -37,7 +37,7 @@ export default function Projects({ projects }: ProjectsProps) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query MyQuery {
@@ -57,5 +57,6 @@ export async function getServerSideProps() {
     props: {
       projects,
     },
+    revalidate: 60 * 60 * 24, // 24 hours
   };
 }
