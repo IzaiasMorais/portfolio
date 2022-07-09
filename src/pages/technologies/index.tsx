@@ -1,5 +1,10 @@
-export default function Technologies() {
+import styles from "./styles.module.scss";
+
+export default function Contact() {
   return (
-    <h1>Tecnologias</h1>
-  )
+    <section className={styles.ContactContainer}>
+      <h1>Contato</h1>
+      <hr />
+    </section>
+  );
 }
