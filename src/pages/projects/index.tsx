@@ -41,7 +41,7 @@ export async function getServerSideProps() {
   const { data } = await client.query({
     query: gql`
       query MyQuery {
-        projects {
+        projects(last: 12, orderBy: order_ASC) {
           image
           strong
           description
