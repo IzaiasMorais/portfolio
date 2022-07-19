@@ -64,7 +64,7 @@ export default function Contact() {
           </li>
           <li>
             <a
-              href="https://github.com/IzaiasMorais"
+              href="https://wa.me/5586995360996"
               target="_blank"
               rel="noreferrer"
             >

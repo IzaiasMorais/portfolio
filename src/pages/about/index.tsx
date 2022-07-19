@@ -5,6 +5,9 @@ export default function About() {
     <section className={styles.AboutContainer}>
       <h1>Sobre</h1>
       <hr />
+      <p>
+        
+      </p>
     </section>
   );
 }

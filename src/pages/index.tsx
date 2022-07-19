@@ -18,7 +18,7 @@ const Home: NextPage = () => {
               <a className={styles.talk}>Fale comigo</a>
             </Link>
 
-            <a href="" className={styles.cv}>
+            <a href="https://encurtador.com.br/yEKXY" className={styles.cv}>
               <HiOutlineDocumentDownload />
               CV
             </a>
