@@ -17,4 +17,60 @@
     margin-bottom: 1rem;
     color: var(--gray-300);
   }
+
+  .aboutDiv {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > div {
+      max-width: 800px;
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: var(--gray-300);
+      line-height: 1.6;
+      text-align: center;
+    }
+  }
+
+  .moreInfo {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+
+    div {
+      color: var(--gray-300);
+      padding: 1.5rem;
+      border-radius: 0.25rem;
+      background: var(--gray-500);
+      transition: transform 0.3s;
+
+      h1 {
+        color: #f5f5f5;
+      }
+
+      a {
+        // text-decoration: underline;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: #f5f5f5;
+        display: block;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--text-purple);
+        }
+      }
+
+      &:hover {
+        transform: translate3d(0, -3px, 0);
+      }
+    }
+  }
 }
