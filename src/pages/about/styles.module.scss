@@ -49,10 +49,10 @@
     }
 
     div {
-      max-width: 800px;
       display: flex;
       flex-wrap: wrap;
       gap: 0.7rem;
+      max-width: max-content;
 
       div {
         padding: 2rem;
@@ -102,5 +102,11 @@
 @media (max-width: 768px) {
   .moreInfo {
     grid-template-columns: 1fr !important;
+  }
+
+  .technologies {
+    div {
+      margin: 0 auto;
+    }
   }
 }
