@@ -11,14 +11,18 @@ interface ProjectsProps {
   }[];
 }
 
-export default function Projects({ projects }: ProjectsProps) {
+interface DataProps {
+  data: ProjectsProps;
+}
+
+export default function Projects() {
   return (
     <section>
       <div className={styles.ProjectContainer}>
         <h1>Projetos</h1>
         <hr />
         <ul className={styles.gallery}>
-          {projects.map((project) => (
+          {/* {projects.map((project) => (
             <li key={project.strong}>
               <div className={styles.image}>
                 <a href={project.site} target="_blank" rel="noreferrer">
@@ -30,33 +34,33 @@ export default function Projects({ projects }: ProjectsProps) {
                 <p>{project.description}</p>
               </div>
             </li>
-          ))}
+          ))} */}
         </ul>
       </div>
     </section>
   );
 }
 
-export async function getStaticProps() {
-  const { data } = await client.query<ProjectsProps>({
-    query: gql`
-      query MyQuery {
-        projects(last: 12, orderBy: order_ASC) {
-          image
-          strong
-          description
-          site
-        }
-      }
-    `,
-  });
+// export async function getStaticProps() {
+//   const data = await client.query<DataProps>({
+//     query: gql`
+//       query MyQuery {
+//         projects(last: 12, orderBy: order_ASC) {
+//           image
+//           strong
+//           description
+//           site
+//         }
+//       }
+//     `,
+//   });
 
-  const projects = data.projects;
+//   const projects = data.data.data.projects;
 
-  return {
-    props: {
-      projects,
-    },
-    revalidate: 60 * 60 * 24, // 24 hours
-  };
-}
+//   return {
+//     props: {
+//       projects,
+//     },
+//     revalidate: 60 * 60 * 24, // 24 hours
+//   };
+// }
