@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { client } from "../../lib/apollo";
 import styles from "./projects.module.scss";
 
@@ -44,7 +44,7 @@ export default function Projects({ projects }: ProjectsProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const response = await client.query<ProjectsProps>({
     query: gql`
       query MyQuery {
