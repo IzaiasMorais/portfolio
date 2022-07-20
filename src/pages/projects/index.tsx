@@ -38,7 +38,7 @@ export default function Projects({ projects }: ProjectsProps) {
 }
 
 export async function getStaticProps() {
-  const { data } = await client.query({
+  const { data } = await client.query<ProjectsProps>({
     query: gql`
       query MyQuery {
         projects(last: 12, orderBy: order_ASC) {
