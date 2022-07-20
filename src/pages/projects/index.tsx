@@ -15,7 +15,9 @@ interface DataProps {
   data: ProjectsProps;
 }
 
-export default function Projects() {
+export default function Projects({ projects }: ProjectsProps) {
+  console.log(projects);
+
   return (
     <section>
       <div className={styles.ProjectContainer}>
@@ -41,26 +43,28 @@ export default function Projects() {
   );
 }
 
-// export async function getStaticProps() {
-//   const data = await client.query<DataProps>({
-//     query: gql`
-//       query MyQuery {
-//         projects(last: 12, orderBy: order_ASC) {
-//           image
-//           strong
-//           description
-//           site
-//         }
-//       }
-//     `,
-//   });
+export async function getStaticProps() {
+  const response = await client.query<ProjectsProps>({
+    query: gql`
+      query MyQuery {
+        projects(last: 12, orderBy: order_ASC) {
+          image
+          strong
+          description
+          site
+        }
+      }
+    `,
+  });
 
-//   const projects = data.data.data.projects;
+  const data = response.data;
 
-//   return {
-//     props: {
-//       projects,
-//     },
-//     revalidate: 60 * 60 * 24, // 24 hours
-//   };
-// }
+  const projects = data.projects;
+
+  return {
+    props: {
+      projects,
+    },
+    // revalidate: 60 * 60 * 24, // 24 hours
+  };
+}
