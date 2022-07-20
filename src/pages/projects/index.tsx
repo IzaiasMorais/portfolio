@@ -1,4 +1,5 @@
 import { gql } from "@apollo/client";
+import { GetServerSideProps } from "next";
 import { client } from "../../lib/apollo";
 import styles from "./projects.module.scss";
 
@@ -43,7 +44,7 @@ export default function Projects({ projects }: ProjectsProps) {
   );
 }
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async () => {
   const response = await client.query<ProjectsProps>({
     query: gql`
       query MyQuery {
@@ -67,4 +68,4 @@ export async function getServerSideProps() {
     },
     // revalidate: 60 * 60 * 24, // 24 hours
   };
-}
+};
