@@ -26,6 +26,7 @@
 
     > div {
       max-width: 800px;
+      padding: 1rem;
     }
 
     p {
@@ -33,6 +34,29 @@
       color: var(--gray-300);
       line-height: 1.6;
       text-align: center;
+    }
+  }
+
+  .technologies {
+    margin: 2rem;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      text-align: center;
+    }
+
+    div {
+      max-width: 800px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+
+      div {
+        padding: 2rem;
+      }
     }
   }
 
@@ -72,5 +96,11 @@
         transform: translate3d(0, -3px, 0);
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .moreInfo {
+    grid-template-columns: 1fr !important;
   }
 }

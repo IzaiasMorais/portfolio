@@ -1,4 +1,17 @@
 import styles from "./styles.module.scss";
+import { DiCss3, DiHtml5, DiJsBadge, DiReact } from "react-icons/di";
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiVuedotjs,
+  SiFigma,
+  SiTailwindcss,
+  SiChakraui,
+  SiNotion,
+  SiSass,
+} from "react-icons/si";
+import { GrGraphQl, GrStripe } from "react-icons/gr";
+import { VscAzure } from "react-icons/vsc";
 
 export default function About() {
   return (
@@ -13,13 +26,78 @@ export default function About() {
             desenvolvimento de aplicações Web. Sigo bucando oportunidades para
             resolver problemas. <br /> <br />
             Minha jornada como programador começou em 2019, onde estudava o
-            básico de Pyhton e depois migrando para JavaScript, que foi uma
-            linguagem que me encantou demais. Ao longo de todoas esses anos
-            desenvolvi vários projetos, sempre buscando resolver problemas reais
-            e entregar soluções, e até posso dizer que quem me conhece sabe que
-            eu não gosto muito de projetos "estáticos", que não resolviam nenhum
+            básico de Pyhton e depois migrando para JavaScript, uma linguagem
+            que me encantou demais. Ao longo de todos esses anos desenvolvi
+            vários projetos, sempre buscando desenvolver soluções para problemas
+            reais, e até posso dizer que quem me conhece sabe que eu nunca gostei
+            muito de projetos &quot;estáticos&quot;, que não resolviam nenhum
             problema ou possuíam alguma funcionalidade.
           </p>
+        </div>
+      </div>
+      <div className={styles.technologies}>
+        <h1>Tecnologias</h1>
+        <div>
+          <div>
+            <DiHtml5 size={40} />
+          </div>
+          <div>
+            <DiCss3 size={40} />
+          </div>
+          <div>
+            <DiJsBadge size={40} />
+          </div>
+          <div>
+            <SiTypescript size={40} />
+          </div>
+          <div>
+            <DiReact size={40} />
+          </div>
+          <div>
+            <SiNextdotjs size={40} />
+          </div>
+          <div>
+            <SiVuedotjs size={40} />
+          </div>
+
+          <div>
+            <SiFigma size={40} />
+          </div>
+          <div>
+            <SiTailwindcss size={40} />
+          </div>
+          <div>
+            <SiChakraui size={40} />
+          </div>
+          <div>
+            <img
+              src="https://api.iconify.design/simple-icons:fauna.svg?color=%23ffffff"
+              width={40}
+              height={40}
+            />
+          </div>
+          <div>
+            <GrGraphQl size={40} />
+          </div>
+          <div>
+            <SiNotion size={40} />
+          </div>
+          <div>
+            <VscAzure size={40} />
+          </div>
+          <div>
+            <img
+              src="https://api.iconify.design/file-icons:styledcomponents.svg?color=%23ffffff"
+              width={40}
+              height={40}
+            />
+          </div>
+          <div>
+            <SiSass size={40} />
+          </div>
+          <div>
+            <GrStripe size={40} />
+          </div>
         </div>
       </div>
       <div className={styles.moreInfo}>
@@ -28,7 +106,7 @@ export default function About() {
           <a href="https://www.ifpi.edu.br/" target="_blank" rel="noreferrer">
             IFPI Campus Teresina Central
           </a>
-          <p>Técnico em administração| Fev. de 2019 - Jun. de 2022</p>
+          <p>Técnico em administração | Fev. de 2019 - Jun. de 2022</p>
         </div>
 
         <div>

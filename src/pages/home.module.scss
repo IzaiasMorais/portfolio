@@ -1,10 +1,14 @@
 .HomeContainer {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1060px;
   margin: 7rem auto;
+  gap: 4rem;
 
   align-items: center;
   justify-content: space-between;
+
+  padding: 0 1rem;
 
   .content {
     h1 {
@@ -51,5 +55,38 @@
 
   .svg {
     max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content,
+  .svg {
+    margin: 0 auto;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      grid-column: 1 / 2;
+    }
+
+    div {
+      margin-left: 1rem;
+      grid-column: 2 / 3;
+      grid-row: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 610px) {
+  .content {
+    display: flex;
+    flex-direction: column;
   }
 }
