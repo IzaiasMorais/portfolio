@@ -43,7 +43,7 @@ export default function Projects({ projects }: ProjectsProps) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await client.query<ProjectsProps>({
     query: gql`
       query MyQuery {
