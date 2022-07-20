@@ -24,7 +24,7 @@ export default function Projects({ projects }: ProjectsProps) {
         <h1>Projetos</h1>
         <hr />
         <ul className={styles.gallery}>
-          {/* {projects.map((project) => (
+          {projects.map((project) => (
             <li key={project.strong}>
               <div className={styles.image}>
                 <a href={project.site} target="_blank" rel="noreferrer">
@@ -36,7 +36,7 @@ export default function Projects({ projects }: ProjectsProps) {
                 <p>{project.description}</p>
               </div>
             </li>
-          ))} */}
+          ))}
         </ul>
       </div>
     </section>
