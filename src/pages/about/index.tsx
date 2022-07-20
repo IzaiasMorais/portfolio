@@ -23,7 +23,7 @@ export default function About() {
           <p>
             Olá, me chamo Izaías e sou epaixonado por Programação. Venho
             estudando tecnologias na área há cerca de 3 anos, com foco no
-            desenvolvimento de aplicações Web. Sigo bucando oportunidades para
+            desenvolvimento de aplicações Web. Sigo buscando oportunidades para
             resolver problemas. <br /> <br />
             Minha jornada como programador começou em 2019, onde estudava o
             básico de Pyhton e depois migrando para JavaScript, uma linguagem
