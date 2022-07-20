@@ -11,12 +11,6 @@ interface ProjectsProps {
   }[];
 }
 
-interface DataProps {
-  data: {
-    projects: {};
-  };
-}
-
 export default function Projects({ projects }: ProjectsProps) {
   return (
     <section>
@@ -44,7 +38,7 @@ export default function Projects({ projects }: ProjectsProps) {
 }
 
 export async function getStaticProps() {
-  const { data }: DataProps = await client.query({
+  const { data } = await client.query<ProjectsProps>({
     query: gql`
       query MyQuery {
         projects(last: 12, orderBy: order_ASC) {
@@ -57,7 +51,7 @@ export async function getStaticProps() {
     `,
   });
 
-  const { projects } = data;
+  const projects = data.projects;
 
   return {
     props: {
