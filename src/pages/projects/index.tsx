@@ -1,5 +1,4 @@
 import { gql } from "@apollo/client";
-import { GetStaticProps } from "next";
 import { client } from "../../lib/apollo";
 import styles from "./projects.module.scss";
 
@@ -12,13 +11,7 @@ interface ProjectsProps {
   }[];
 }
 
-interface DataProps {
-  data: ProjectsProps;
-}
-
 export default function Projects({ projects }: ProjectsProps) {
-  console.log(projects);
-
   return (
     <section>
       <div className={styles.ProjectContainer}>
@@ -44,7 +37,7 @@ export default function Projects({ projects }: ProjectsProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export async function getStaticProps() {
   const response = await client.query<ProjectsProps>({
     query: gql`
       query MyQuery {
@@ -68,4 +61,4 @@ export const getStaticProps: GetStaticProps = async () => {
     },
     // revalidate: 60 * 60 * 24, // 24 hours
   };
-};
+}
