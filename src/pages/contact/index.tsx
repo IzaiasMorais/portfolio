@@ -7,6 +7,7 @@ import {
   SiTwitter,
   SiWhatsapp,
 } from "react-icons/si";
+import { IoLogoDiscord } from "react-icons/io5";
 
 export default function Contact() {
   return (
@@ -31,6 +32,12 @@ export default function Contact() {
               rel="noreferrer"
             >
               <SiLinkedin /> Linkedin
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.com/users/734056109605650534">
+              <IoLogoDiscord size={25}/>
+              Discord
             </a>
           </li>
           <li>
